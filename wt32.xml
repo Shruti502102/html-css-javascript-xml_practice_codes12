@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>
+    <document>
+        <title>Introduction to xml</title>
+        <author>John Doe</author>
+        <content>
+            XML stands for extandable 
+        </content>
+    </document>
+    <document>
+        <title>html vs xml</title>
+        <author>Jaane Smith</author>
+        <content>
+            html is used for creating web pages 
+        </content>
+    </document>
+</documents>

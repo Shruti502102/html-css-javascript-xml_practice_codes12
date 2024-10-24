@@ -1,0 +1,31 @@
+p{
+    background-color:yellow;
+    color:red;
+    font-size:20px;
+}
+#p2{
+    color:aqua;
+}
+.green-text{
+    color:blueviolet;
+}
+#bg{
+    background-color:blueviolet;
+    border-style:solid;
+    padding-top:50px;
+    padding-left:70px;
+    padding-bottom: 20px;
+}
+body{
+    background-color: beige;
+}
+ul{
+    list-style-type: square;
+}
+ol{
+    list-style-type: lower-alpha;
+}
+
+li{
+    border:solid black;
+}

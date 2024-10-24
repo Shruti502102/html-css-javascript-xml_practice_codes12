@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecasting System</title>
+    <link rel="stylesheet" href="wt20weatherc.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Forecasting System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Current Weather</a></li>
+            <li><a href="#">Forecast</a></li>
+            <li><a href="#">Maps</a></li>
+            <li><a href="#">Alerts</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="current-weather">
+            <h2>Current Weather</h2>
+            <div class="weather-data">
+                <p>Temperature: <span id="temp">25°C</span></p>
+                <p>Humidity: <span id="humidity">60%</span></p>
+                <p>Wind Speed: <span id="wind-speed">15 km/h</span></p>
+            </div>
+            <img src="weather-icon.png" alt="Weather Icon">
+        </section>
+        <section id="forecast">
+            <h2>Forecast</h2>
+            <div class="forecast-data">
+                <p>Today: <span id="today-forecast">Sunny</span></p>
+                <p>Tomorrow: <span id="tomorrow-forecast">Partly Cloudy</span></p>
+                <p>This Week: <span id="this-week-forecast">Rainy</span></p>
+            </div>
+        </section>
+        <section id="maps">
+            <h2>Maps</h2>
+            <div class="map-container">
+                <img src="map.png" alt="Map">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Weather Forecasting System</p>
+    </footer>
+
+    <div class="background">
+        <div class="sun"></div>
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="bird bird-1"></div>
+        <div class="bird bird-2"></div>
+    </div>
+</body>
+</html>

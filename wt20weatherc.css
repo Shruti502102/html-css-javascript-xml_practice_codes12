@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: rgba(68, 68, 68, 0.8);
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 10;
+    position: relative;
+}
+
+section {
+    background-color: rgba(247, 247, 247, 0.9);
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: relative;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+.weather-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.weather-data p {
+    margin-bottom: 10px;
+}
+
+.weather-data span {
+    font-weight: bold;
+}
+
+#current-weather img {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+
+.forecast-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.forecast-data p {
+    margin-bottom: 10px;
+}
+
+.forecast-data span {
+    font-weight: bold;
+}
+
+.map-container {
+    width: 100%;
+    height: 300px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+    position: relative;
+    z-index: 10;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    overflow: hidden;
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    animation: rotate-sun 20s linear infinite;
+}
+
+@keyframes rotate-sun {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cloud {
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 150px;
+    height: 80px;
+    top: -40px;
+    left: 20px;
+}
+
+.cloud::after {
+    width: 120px;
+    height: 60px;
+    top: -20px;
+    right: 20px;
+}
+
+.cloud-1 {
+    top: 20%;
+    left: -200px;
+    animation: move-cloud 60s linear infinite;
+}
+
+.cloud-2 {
+    top: 40%;
+    left: -200px;
+    animation: move-cloud 70s linear infinite;
+}
+
+.cloud-3 {
+    top: 60%;
+    left: -200px;
+    animation: move-cloud 50s linear infinite;
+}
+
+@keyframes move-cloud {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.bird {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    position: absolute;
+    animation: fly-bird 15s linear infinite;
+}
+
+.bird::before, .bird::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+.bird::before {
+    transform: rotate(45deg);
+}
+
+.bird::after {
+    transform: rotate(-45deg);
+}
+
+.bird-1 {
+    top: 30%;
+    left: -50px;
+    animation-duration: 12s;
+}
+
+.bird-2 {
+    top: 50%;
+    left: -50px;
+    animation-duration: 18s;
+}
+
+@keyframes fly-bird {
+    from {
+        left: -50px;
+    }
+    to {
+        left: 110%;
+        top: 10%;
+    }
+}

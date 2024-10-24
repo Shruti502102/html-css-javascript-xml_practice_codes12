@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HI22wtday</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <script>
+        // Using var to declare and initialize variables
+        var FirstName = 'Shruti';
+        var LastName = 'Srivastava';
+        
+        // Displaying the values of the 'var' variables
+        document.write("Using 'var' to declare and initialize variables:<br>");
+        document.write("First Name: " + FirstName + "<br>");
+        document.write("Last Name: " + LastName + "<br>");
+        
+        // Reassigning a 'var' variable
+        var age = 20;
+        document.write("<br>Reassigning a 'var' variable:<br>");
+        document.write("Age: " + age + "<br>");
+        age = 21; // Reassigning the 'age' variable
+        document.write("Updated Age: on my birthdy 13 august 2003: " + age + " years old <br>");
+        
+        // Hoisting with 'var'
+        document.write("<br>Hoisting with 'var'<br>");
+        document.write("Before declaration: " + city + "<br>"); // Output: undefined
+        var city = "Mumbai"; // Variable declaration is hoisted to the top
+        document.write("After declaration: " + city + "<br>");
+        
+        // 'var' variables have function scope
+        function greet() {
+            if (true) {
+                var message = "Hello, World";
+            }
+            document.write("<br>'var' variables have function scope:<br>");
+            document.write("Inside function: " + message + "<br>");
+        }
+        greet(); // Calling the function
+        
+        // 'message' is still accessible here due to function scope
+        // document.write("Outside function: " + message + "<br>"); // This will cause an error as 'message' is not accessible outside the function.
+    </script>
+    <script>
+        // Using Array Literal
+        var fruitsLiteral = ["Apple", "Banana", "Cherry"];
+        document.write("Array created using Array Literal: " + fruitsLiteral);
+    </script>
+    
+    <h2>Using Array Instance:</h2>
+    <script>
+        // Using Array Instance new used to create object object of array made given values like apple
+        var fruitsInstance = new Array("Orange", "Grapes", "Strawberry");
+        document.write("Array created using Array Instance: " + fruitsInstance);
+    </script> 
+    <h2>Using Array Constructor:</h2>
+    <script>
+        // Using Array Constructor to create an array
+        var fruitsConstructor = new Array();
+        fruitsConstructor[0]=("Peach");
+        fruitsConstructor[1]=("Mango");
+        fruitsConstructor[2]=("Watermelon");
+        document.write("Fruits by constructor:"+fruitsConstructor);
+    </script>
+    <h2>While Loop:</h2>
+    <script>
+        //using  a while loop
+        var i = 1;
+        while (i <= 5) {
+            document.write("Iteration "+i+"<br>");
+            i++;
+        }//condition check firstly if true then enter
+    </script>
+    <h2>Do While loop:</h2>
+    <script>
+        //using do while loop - first execute one time of do then check the condition 
+        var j=1;
+        do{
+            document.write("Iteration "+j+"<br>");
+            j++;
+        } while (j<=5);
+    </script>    
+    <h2>For Loop:</h2>
+    <script>
+        //using for loop
+        //javascript makes file responsive while css styles the file whereas html gives structure to website.
+        for (var k = 1; k <= 5; k++) {
+            document.write("Iteration "+k+"<br>");
+        }//mobile app webites maded on bootstrap.
+    //combination of html , js, css all used in this.
+    </script>
+    <div class ="container">
+        <h1 class ="display-4">Bootstrap typography</h1>
+        <p class ="lead">This is an example of Bootstrap Typography</p>
+        <p class="text-muted">MUTED  TEXT</p>
+        <p class="text-danger">DANGER-Beware of Dogs.</p>
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+        <button class="btn btn-success">Success Button</button>
+        <button class="btn btn-danger">Danger Button</button>
+        <button class="btn btn-outline-secondary">Outline Secondary Button</button>  
+        <button class="btn btn-home">Home Button</button> 
+        <div class="alert alert-primary" role="alert">
+            This is a primary alert.
+        </div>      
+        <div class="alert alert-secondary" role="alert">
+            This is a secondary alert.
+        </div>  
+        <div class="alert alert-success" role="alert">
+            This is a success alert.
+        </div>
+        <div class="alert alert-danger" role="alert">
+            This is a danger alert.
+        </div>   
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

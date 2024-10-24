@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tech Workshop Registration</title>
+    <link rel="stylesheet" href="wttest55.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Web Tech Workshop</h1>
+
+        <table border="2">
+            <caption>Workshop Participants</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date of Joining</th>
+                    <th>Shift</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shruti Srivastava</td>
+                    <td>20-08-2024</td>
+                    <td>Morning</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jaya Yadav</td>
+                    <td>20-08-2024</td>
+                    <td>Evening</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Maya Singh</td>
+                    <td>21-08-2024</td>
+                    <td>Morning</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Register for Web Tech Workshop</h2>
+        <form action="#" method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="doj">Date of Joining:</label>
+            <input type="date" id="doj" name="doj" required>
+
+            <label>Shift:</label>
+            <label><input type="checkbox" name="shift" value="Morning"> Morning</label>
+            <label><input type="checkbox" name="shift" value="Evening"> Evening</label>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="feestatus">Fee Status:</label>
+            <select id="feestatus" name="feestatus" required>
+                <option value="">--Select--</option>
+                <option value="Paid">Paid</option>
+                <option value="Pending">Pending</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

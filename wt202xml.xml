@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDCatalog>
+    <CD>
+        <TITLE>Thriller</TITLE>
+        <ARTIST>Michael Jackson</ARTIST>
+        <COUNTRY>USA</COUNTRY>
+        <COMPANY>Epic</COMPANY>
+        <PRICE>10.99</PRICE>
+        <YEAR>1982</YEAR>
+    </CD>
+    <CD>
+        <TITLE>Back in Black</TITLE>
+        <ARTIST>AC/DC</ARTIST>
+        <COUNTRY>Australia</COUNTRY>
+        <COMPANY>Atlantic</COMPANY>
+        <PRICE>9.99</PRICE>
+        <YEAR>1980</YEAR>
+    </CD>
+    <CD>
+        <TITLE>Abbey Road</TITLE>
+        <ARTIST>The Beatles</ARTIST>
+        <COUNTRY>UK</COUNTRY>
+        <COMPANY>Apple</COMPANY>
+        <PRICE>12.99</PRICE>
+        <YEAR>1969</YEAR>
+    </CD>
+    <CD>
+        <TITLE>The Dark Side of the Moon</TITLE>
+        <ARTIST>Pink Floyd</ARTIST>
+        <COUNTRY>UK</COUNTRY>
+        <COMPANY>Harvest</COMPANY>
+        <PRICE>11.99</PRICE>
+        <YEAR>1973</YEAR>
+    </CD>
+    <CD>
+        <TITLE>Hotel California</TITLE>
+        <ARTIST>Eagles</ARTIST>
+        <COUNTRY>USA</COUNTRY>
+        <COMPANY>Asylum</COMPANY>
+        <PRICE>10.99</PRICE>
+        <YEAR>1976</YEAR>
+    </CD>
+</CDCatalog>

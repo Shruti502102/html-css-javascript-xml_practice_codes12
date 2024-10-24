@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Circles, Ribbons, and Triangles Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: #e0f7fa;
+            position: relative;
+        }
+
+        /* Circles */
+        .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 87, 34, 0.7);
+            border-radius: 50%;
+        }
+
+        .circle:nth-child(1) {
+            animation: float1 15s linear infinite, shimmer1 3s ease-in-out infinite;
+            top: 10%;
+            left: 10%;
+        }
+
+        .circle:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            background-color: rgba(63, 81, 181, 0.7);
+            animation: float2 20s ease-in-out infinite, shimmer2 4s ease-in-out infinite;
+            top: 30%;
+            left: 50%;
+        }
+
+        .circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 150, 136, 0.7);
+            animation: float3 25s linear infinite, shimmer3 5s ease-in-out infinite;
+            top: 60%;
+            left: 80%;
+        }
+
+        /* Ribbons */
+        .ribbon {
+            position: absolute;
+            width: 300px;
+            height: 20px;
+            background-color: rgba(255, 193, 7, 0.7);
+            border-radius: 10px;
+        }
+
+        .ribbon:nth-child(4) {
+            animation: wave1 10s linear infinite, shimmer1 3s ease-in-out infinite;
+            top: 20%;
+            left: 15%;
+        }
+
+        .ribbon:nth-child(5) {
+            width: 350px;
+            height: 25px;
+            background-color: rgba(76, 175, 80, 0.7);
+            animation: wave2 15s ease-in-out infinite, shimmer2 4s ease-in-out infinite;
+            top: 40%;
+            left: 70%;
+        }
+
+        .ribbon:nth-child(6) {
+            width: 400px;
+            height: 30px;
+            background-color: rgba(244, 67, 54, 0.7);
+            animation: wave3 20s linear infinite, shimmer3 5s ease-in-out infinite;
+            top: 70%;
+            left: 20%;
+        }
+
+        /* Triangles */
+        .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid rgba(255, 193, 7, 0.7);
+        }
+
+        .triangle:nth-child(7) {
+            animation: spin1 12s linear infinite, shimmer1 3s ease-in-out infinite;
+            top: 25%;
+            left: 30%;
+        }
+
+        .triangle:nth-child(8) {
+            border-bottom-color: rgba(63, 81, 181, 0.7);
+            animation: spin2 18s ease-in-out infinite, shimmer2 4s ease-in-out infinite;
+            top: 55%;
+            left: 60%;
+        }
+
+        .triangle:nth-child(9) {
+            border-bottom-color: rgba(76, 175, 80, 0.7);
+            animation: spin3 22s linear infinite, shimmer3 5s ease-in-out infinite;
+            top: 80%;
+            left: 40%;
+        }
+
+        /* Keyframes for Circles */
+        @keyframes float1 {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        @keyframes shimmer1 {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-40px) rotate(-180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(-360deg);
+            }
+        }
+
+        @keyframes shimmer2 {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes float3 {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-50px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        @keyframes shimmer3 {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Keyframes for Ribbons */
+        @keyframes wave1 {
+            0% {
+                transform: translateX(0) rotate(0deg);
+            }
+            50% {
+                transform: translateX(50px) rotate(15deg);
+            }
+            100% {
+                transform: translateX(0) rotate(0deg);
+            }
+        }
+
+        @keyframes wave2 {
+            0% {
+                transform: translateX(0) rotate(0deg);
+            }
+            50% {
+                transform: translateX(60px) rotate(-15deg);
+            }
+            100% {
+                transform: translateX(0) rotate(0deg);
+            }
+        }
+
+        @keyframes wave3 {
+            0% {
+                transform: translateX(0) rotate(0deg);
+            }
+            50% {
+                transform: translateX(70px) rotate(10deg);
+            }
+            100% {
+                transform: translateX(0) rotate(0deg);
+            }
+        }
+
+        /* Keyframes for Triangles */
+        @keyframes spin1 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin2 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes spin3 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #ff4e50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff7676;
+        }
+    </style>
+</head>
+<body>
+    <!-- Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Ribbons -->
+    <div class="ribbon"></div>
+    <div class="ribbon"></div>
+    <div class="ribbon"></div>
+
+    <!-- Triangles -->
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+
+    <form>
+        <h1>Registration Form</h1>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

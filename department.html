@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Data Science</title>
+    <style>
+        /* Body Style */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, rgba(0, 86, 179, 0.8), rgba(0, 170, 255, 0.8));
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Parallax Background */
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1517430816045-df4b7de01f18?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            z-index: -1;
+            animation: moveBg 20s linear infinite;
+        }
+
+        @keyframes moveBg {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-50px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            animation: fadeInContainer 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInContainer {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Heading Style */
+        h1, h2 {
+            text-align: center;
+            color: #ffcc00;
+            margin-top: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Paragraph and List Styles */
+        p, ul, ol {
+            max-width: 900px;
+            margin: 20px auto;
+            line-height: 1.8;
+            text-align: justify;
+            padding: 0 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        ul, ol {
+            padding-left: 40px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button Style */
+        .contact-btn {
+            display: block;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 12px 20px;
+            background-color: #ffcc00;
+            color: #0056b3;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            animation: fadeInBtn 3s ease-in-out;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffd633;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeInBtn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+  opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parallax-bg"></div>
+    <div class="container">
+        <h1>Department of Data Science</h1>
+        <p>Welcome to the Department of Data Science at Noida Institute of Engineering and Technology!<br> 
+        We are committed to providing a comprehensive education in the rapidly evolving field of Data Science.</p>
+        
+        <h2>Our Mission</h2>
+        <p>Our mission is to empower students with a strong foundation in Data Science,<br>
+        equipping them with the skills and knowledge necessary to excel in a data-driven world.<br> 
+        We aim to foster critical thinking, innovation, and a deep understanding of data analytics and machine learning.</p>
+        
+        <h2>Program Offered</h2>
+        <p>We offer a robust curriculum that includes:</p>
+        <ul>
+            <li>Undergraduate programs in Data Science</li>
+            <li>Postgraduate programs in Data Science</li>
+            <li>Certificate courses in specialized areas like Machine Learning, Artificial Intelligence, and Big Data Analytics</li>
+        </ul>
+        
+        <h2>Faculty</h2>
+        <p>Our department boasts a team of highly qualified and experienced faculty members<br>
+        who are experts in various domains of Data Science.<br> 
+        They bring a wealth of knowledge from both academic research and industry practice,<br>
+        providing students with a well-rounded education.</p>
+        
+        <h2>Research Areas</h2>
+        <p>Our department is actively engaged in research across various areas:</p>
+        <ol>
+            <li>Big Data Analytics</li>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>Natural Language Processing</li>
+            <li>Data-Driven Decision-Making</li>
+        </ol>
+        
+        <h2>Facilities</h2>
+        <p>The department is equipped with state-of-the-art laboratories and computing facilities,<br>
+        providing students and researchers with access to the latest software and tools required for data science projects.<br> 
+        Our facilities are designed to support both academic learning and innovative research.</p>
+        
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or would like more information about our programs and research,<br>
+        please feel free to contact us. We are here to assist you in any way we can.</p>
+
+        <a href="contact.html" class="contact-btn">Contact Us</a>
+    </div>
+</body>
+</html>
+

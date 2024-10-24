@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BOOK[
+    <!ELEMENT book (title, author, year)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+    ]>
+<Library>
+    <book>
+        <title>The Hobbit</title>
+        <author>J. R. R. Tolkien</author>
+        <year>1954</year>
+    </book>
+</Library>
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM Tree</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+
+        /* Drawing lines */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 1px solid #ccc;
+            width: 50%;
+            height: 20px;
+        }
+
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 1px solid #ccc;
+        }
+
+        /* Hide lines for root node */
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+
+        .tree li:only-child {
+            padding-top: 0;
+        }
+
+        /* Connecting parents with children */
+        .tree li:first-child::before, .tree li:last-child::after {
+            border: 0 none;
+        }
+
+        .tree li:last-child::before {
+            border-right: 1px solid #ccc;
+            border-radius: 0 5px 0 0;
+            -webkit-border-radius: 0 5px 0 0;
+            -moz-border-radius: 0 5px 0 0;
+        }
+
+</head>
+<body>
+
+    <h1>HTML DOM Tree</h1>
+
+    <div class="tree">
+        <ul>
+            <li>
+                <div>&lt;html&gt;</div>
+                <ul>
+                    <li>
+                        <div>&lt;head&gt;</div>
+                        <ul>
+                            <li>
+                                <div>&lt;title&gt;HTML DOM Tree&lt;/title&gt;</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>&lt;body&gt;</div>
+                        <ul>
+                            <li>
+                                <div>&lt;h1&gt;HTML DOM Tree&lt;/h1&gt;</div>
+                            </li>
+                            <li>
+                                <div>&lt;div&gt;</div>
+                                <ul>
+                                    <li>
+                                        <div>Text Node</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

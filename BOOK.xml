@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book category="Fiction">
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <year>1925</year>
+        <price>10.99</price>
+    </book>
+    <book category="Science Fiction">
+        <title>Dune</title>
+        <author>Frank Herbert</author>
+        <year>1965</year>
+        <price>15.99</price>
+    </book>
+    <book category="Mystery">
+        <title>Gone Girl</title>
+        <author>Gillian Flynn</author>
+        <year>2012</year>
+        <price>9.99</price>
+    </book>
+    <book category="Non-Fiction">
+        <title>Sapiens: A Brief History of Humankind</title>
+        <author>Yuval Noah Harari</author>
+        <year>2011</year>
+        <price>18.99</price>
+    </book>
+    <book category="Fantasy">
+        <title>Harry Potter and the Sorcerer's Stone</title>
+        <author>J.K. Rowling</author>
+        <year>1997</year>
+        <price>8.99</price>
+    </book>
+</library>

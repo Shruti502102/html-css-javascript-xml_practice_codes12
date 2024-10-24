@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with Butterfly Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .butterfly {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url('https://r.bing.com/rp/sjRKqL7qEBB3rUAoLZkYF0PHd6Y.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform-origin: center;
+        }
+
+        .butterfly:nth-child(1) {
+            animation: flutter1 12s linear infinite, shimmer1 2s ease-in-out infinite;
+        }
+
+        @keyframes flutter1 {
+            0% {
+                transform: rotate(0deg) translateX(0) scale(1);
+                top: -50px;
+                left: 50vw;
+            }
+            50% {
+                transform: rotate(180deg) translateX(-100px) scale(1.2);
+                top: 50vh;
+                left: 10vw;
+            }
+            100% {
+                transform: rotate(360deg) translateX(0) scale(1);
+                top: 100vh;
+                left: 80vw;
+            }
+        }
+
+        @keyframes shimmer1 {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .butterfly:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            background-image: url('https://r.bing.com/rp/sjRKqL7qEBB3rUAoLZkYF0PHd6Y.svg');
+            animation: flutter2 15s ease-in-out infinite, shimmer2 3s ease-in-out infinite;
+            animation-delay: -2s;
+        }
+
+        @keyframes flutter2 {
+            0% {
+                transform: rotate(0deg) translateX(0) scale(1);
+                top: 100vh;
+                left: 20vw;
+            }
+            50% {
+                transform: rotate(-180deg) translateX(100px) scale(1.3);
+                top: 50vh;
+                left: 80vw;
+            }
+            100% {
+                transform: rotate(-360deg) translateX(0) scale(1);
+                top: -50px;
+                left: 40vw;
+            }
+        }
+
+        @keyframes shimmer2 {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .butterfly:nth-child(3) {
+            width: 140px;
+            height: 140px;
+            background-image: url('https://r.bing.com/rp/sjRKqL7qEBB3rUAoLZkYF0PHd6Y.svg');
+            animation: flutter3 18s linear infinite, shimmer3 4s ease-in-out infinite;
+            animation-delay: -4s;
+        }
+
+        @keyframes flutter3 {
+            0% {
+                transform: rotate(0deg) translateX(0) scale(1);
+                top: 50vh;
+                left: 100vw;
+            }
+            50% {
+                transform: rotate(180deg) translateX(-100px) scale(1.4);
+                top: 10vh;
+                left: 10vw;
+            }
+            100% {
+                transform: rotate(360deg) translateX(0) scale(1);
+                top: 90vh;
+                left: 50vw;
+            }
+        }
+
+        @keyframes shimmer3 {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #ff4e50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff7676;
+        }
+    </style>
+</head>
+<body>
+    <div class="butterfly"></div>
+    <div class="butterfly"></div>
+    <div class="butterfly"></div>
+
+    <form>
+        <h1>Registration Form</h1>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
+

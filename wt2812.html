@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Features - Beautiful and Sparkly</title>
+    <style>
+        body {
+            position: relative;
+            overflow: hidden;
+            background: url('https://i.pinimg.com/originals/8c/77/32/8c77327bf50c24046fc8ea268b13c352.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px #ff79c6, 0 0 10px #ffd700;
+        }
+
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            max-width: 500px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            color: #ff79c6;
+            text-shadow: 1px 1px 2px #000000;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ffd700;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        button {
+            background-color: #ff79c6;
+            font-style: italic;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #bd93f9;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #ffd700;
+        }
+
+        p {
+            background-color: rgba(255, 0, 132, 0.7);
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            margin: 10px;
+            box-shadow: 0 0 10px #ff79c6;
+        }
+
+        .butterfly {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://i.imgur.com/QXaWZWk.png');
+            background-size: cover;
+            animation: fly 8s linear infinite;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translate(-100px, -100px) rotate(0deg);
+            }
+            50% {
+                transform: translate(90vw, 90vh) rotate(180deg);
+            }
+            100% {
+                transform: translate(-100px, -100px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Callback Functions in ES6</h1>
+
+    <div class="container">
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1">
+    </div>
+
+    <div class="container">
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2">
+    </div>
+
+    <div class="container">
+        <button id="add">Add</button>
+        <button id="subtract">Subtract</button>
+        <button id="multiply">Multiply</button>
+        <button id="divide">Divide</button>
+    </div>
+
+    <div class="container">
+        <p>Result: <span id="result"></span></p>
+    </div>
+
+    <script>
+        // Callback functions
+        const add = (a, b) => a + b;
+        const subtract = (a, b) => a - b;
+        const multiply = (a, b) => a * b;
+        const divide = (a, b) => (b === 0 ? "Cannot divide by zero" : a / b);
+
+        // Function to perform an operation and display the result using a callback
+        const calculate = (operation, num1, num2) => {
+            const result = operation(num1, num2);
+            document.getElementById("result").textContent = result;
+        };
+
+        // Event listeners for buttons
+        document.getElementById("add").addEventListener("click", () => {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            calculate(add, num1, num2);
+        });
+
+        document.getElementById("subtract").addEventListener("click", () => {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            calculate(subtract, num1, num2);
+        });
+
+        document.getElementById("multiply").addEventListener("click", () => {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            calculate(multiply, num1, num2);
+        });
+
+        document.getElementById("divide").addEventListener("click", () => {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            calculate(divide, num1, num2);
+        });
+    </script>
+
+    <h1>String Methods in ES6</h1>
+
+    <div class="container">
+        <script>
+            // Original string
+            const originalString = "Hello, World!";
+
+            // Displaying the original string
+            document.write(`<p>Original String: ${originalString}</p>`);
+
+            // String length
+            const stringLength = originalString.length;
+            document.write(`<p>String Length: ${stringLength}</p>`);
+
+            // Converting to lowercase
+            const lowercaseString = originalString.toLowerCase();
+            document.write(`<p>Lowercase String: ${lowercaseString}</p>`);
+
+            // Converting to uppercase
+            const uppercaseString = originalString.toUpperCase();
+            document.write(`<p>Uppercase String: ${uppercaseString}</p>`);
+
+            // Checking if a string contains a substring
+            const containsSubstring = originalString.includes("Hello");
+            document.write(`<p>Contains "Hello": ${containsSubstring}</p>`);
+
+            // Finding the index of a substring
+            const indexOfSubstring = originalString.indexOf("World");
+            document.write(`<p>Index of "World": ${indexOfSubstring}</p>`);
+
+            // Extracting a substring
+            const substring = originalString.substring(7, 12);
+            document.write(`<p>Substring: ${substring}</p>`);
+
+            // Trimming whitespaces
+            const stringWithWhitespace = "  Trim me  ";
+            const trimmedString = stringWithWhitespace.trim();
+            document.write(`<p>Trimmed String: ${trimmedString}</p>`);
+
+            // Replacing a substring
+            const replacedString = originalString.replace("World", "Universe");
+            document.write(`<p>Replaced String: ${replacedString}</p>`);
+        </script>
+    </div>
+
+    <h1>Spread and Rest Operators in ES6</h1>
+
+    <div class="container">
+        <script>
+            // Spread Operator
+            const numbers = [1, 2, 3];
+            const newNumbers = [...numbers, 4, 5];
+            
+            document.write("<h2>Spread Operator:</h2>");
+            document.write(`Original Array: ${numbers}<br>`);
+            document.write(`New Array: ${newNumbers}<br><br>`);
+            
+            // Rest Operator
+            const fruits = ["apple", "banana", "cherry", "date"];
+            const [firstFruit, ...restFruits] = fruits;
+            
+            document.write("<h2>Rest Operator:</h2>");
+            document.write(`First Fruit: ${firstFruit}<br>`);
+            document.write(`Rest of the Fruits: ${restFruits}`);
+        </script>
+    </div>
+    
+    <div class="butterfly"></div>
+</body>
+</html>
+

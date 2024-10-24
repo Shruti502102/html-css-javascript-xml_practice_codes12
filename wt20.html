@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* General Table Styling */
+        table, th, td {
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+
+        /* Alternating Row Colors in Table */
+        table#alter tr:nth-child(even) {
+            background-color: #37c770;
+        }
+        table#alter tr:nth-child(odd) {
+            background-color: #4cd8ae;
+        }
+        table#alter th {
+            color: wheat;
+            background-color: rgb(18, 125, 14);
+        }
+
+        /* Block-level Element Styling */
+        .block-element {
+            background-color: #71f009;
+            border: 3px solid rgb(163, 153, 153);
+            padding: 10px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .block-element1 {
+            background-color: #371fa3;
+            border: 3px solid rgb(163, 153, 153);
+            padding: 10px;
+            color: antiquewhite;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .block-element2 {
+            background-color: #ffff07;
+            border: 3px solid rgb(13, 180, 41);
+            padding: 10px;
+            display: block;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        /* General Class Styling */
+        .main {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .class1 {
+            margin-left: 50px;
+            border: 50px solid purple;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4b400; /* Added background color */
+        }
+        .class2 {
+            font-size: 40px;
+            font-weight: bold;
+            color: black;
+            margin-top: 60px;
+            background-color: purple;
+        }
+        .class3 {
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #197e40;
+        }
+
+        /* Unordered List Styling */
+        ul.main {
+            list-style: cross-fade();
+            background: #0a543e;
+            padding: 30px;
+            width: 70px;
+        }
+
+        /* Ordered List Styling */
+        ol.main {
+            list-style: upper-alpha;
+            background: #4cbcd8;
+            padding: 30px;
+            width: 70px;
+        }
+
+        /* Ordered and Unordered List with Specific Class Styling */
+        .order {
+            list-style: lower-alpha;
+            background: lightblue;
+            padding: 20px;
+            width: 90px;
+        }
+        .order li {
+            background: #e6a1ac;
+            padding: 20px;
+            font-size: 30px;
+            margin: 10px;
+        }
+        .unorder {
+            list-style: circle inside;
+            background: rgb(13, 180, 41);
+            padding: 30px;
+            font-size: medium;
+            margin-bottom: auto;
+            width: 70px;
+        }
+        .unorder li {
+            background: pink;
+            color: black;
+            padding: 20px;
+            font-size: 10px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>CSS Day 20th Aug Learn</h2>
+
+    <!-- Unordered List -->
+    <p>Unordered Lists</p>
+    <ul class="main">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+    </ul>
+
+    <!-- Ordered List -->
+    <p>Ordered Lists</p>
+    <ol class="main">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+    </ol>
+
+    <!-- Table with Alternating Row Colors -->
+    <table id="alter">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Arun</td>
+            <td>Sharma</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>Swati</td>
+            <td>Singh</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <td>Rahul</td>
+            <td>Singh</td>
+            <td>72</td>
+        </tr>
+    </table>
+
+    <!-- Unordered Lists with Custom Styling -->
+    <h1>Unordered List</h1>
+    <ul class="unorder">
+        <li>coffee</li>
+        <li>tea</li>
+        <li>chips</li>
+        <li>biscuit</li>
+    </ul>
+    <ul class="unorder">
+        <li>coffee</li>
+        <li>tea</li>
+        <li>chips</li>
+        <li>biscuit</li>
+    </ul>
+
+    <!-- Ordered List with Custom Styling -->
+    <ul class="order">
+        <li>coffee</li>
+        <li>tea</li>
+        <li>chips</li>
+        <li>biscuit</li>
+    </ul>
+
+    <!-- Block-level Elements -->
+    <div class="block-element">This is a block element. It takes up full width.</div>
+    <div class="block-element1">
+        CSS stands for Cascading Style Sheets<br>
+        CSS describes how HTML elements are to be displayed on screen, paper, or in other media.<br>
+        CSS saves a lot of work. It can control the layout of multiple web pages all at once.<br>
+        External stylesheets are stored in CSS files.
+    </div>
+    <div class="block-element2">
+        dotted - Defines a dotted outline<br>
+        dashed - Defines a dashed outline<br>
+        solid - Defines a solid outline<br>
+        double - Defines a double outline<br>
+        groove - Defines a 3D grooved outline<br>
+        ridge - Defines a 3D ridged outline<br>
+        inset - Defines a 3D inset outline<br>
+        outset - Defines a 3D outset outline<br>
+        none - Defines no outline<br>
+        hidden - Defines a hidden outline
+    </div>
+
+    <!-- Additional Block with Class Styling -->
+    <div class="main">CSS Box-Model Property</div>
+    <div class="class1">NIET</div>
+    <div class="class3">Best Institution in Uttar Pradesh</div>
+</body>
+</html>

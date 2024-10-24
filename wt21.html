@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage Layout in a Box</title>
+    <style>
+        body, .header, .sidebar ul, .main-content h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        .box {
+            border: 2px solid #ccc;
+            padding: 0; /* Removed padding inside the box */
+            background: #fff;
+            max-width: 800px; /* Adjusted max-width to match the image */
+            margin: 0 auto; /* Center the box */
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 24px;
+            border-bottom: 2px solid #ccc; /* Add border to match the header style */
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 20%; /* Match the sidebar width */
+            background-color: #f4f4f4; /* Match the background color */
+            padding: 20px;
+            text-align: left;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: blue; /* Match link color */
+        }
+
+        .main-content {
+            width: 80%; /* Adjust to fit the sidebar */
+            padding: 20px;
+        }
+
+        .main-content h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .main-content p {
+            margin-top: 10px; /* Add some spacing below the heading */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            Header
+        </div>
+        <div class="container">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2>Main Content</h2>
+                <p>This is the main content area.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

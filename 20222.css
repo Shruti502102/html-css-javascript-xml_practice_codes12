@@ -1,0 +1,45 @@
+header{
+    background-color: #333;
+    color:#fff;
+    text-align:center;
+    padding:20px
+}
+nav{
+    background-color: rgb(249, 246, 241);
+    padding: 10px;
+
+}
+nav ul{
+    list-style-type:none;
+    margin:0; 
+    padding:0;
+
+}
+nav li{
+    display: list-items;
+    margin-right:15px;
+}
+nav a{
+    text-decoration:none;
+    color:rgb(164, 150, 150);  
+}
+main{
+    padding:20px;
+
+}
+footer{
+    background-color: rgb(183, 151, 151);
+    color: #fff;
+    text-align: center;
+    padding:10px;
+}
+main section{
+    margin-bottom:20px;
+}
+section{
+    width:33.3%;
+    padding:10px;
+    border:1px solid ghostwhite;
+    float:left;
+    box-sizing: border-box;
+}

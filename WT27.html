@@ -1,0 +1,258 @@
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Buttonevent/onSelect and onLoad Events</title>
+</head>
+<body>
+    <h1>Button Example</h1>
+   <button id="btn" onclick="clickme()">Click me</button>
+
+    <script>
+        function clickme() {
+            var btn=document.getElementById("btn");
+            alert("ok");
+        }
+        </script>
+
+    <button id="btn">Click me</button>
+
+    <script>
+        function clickme() {
+            var btn = document.getElementById("btn");
+            alert("ok");
+        }
+        document.addEventListener("click", clickme);
+    </script>
+    <h1>onSelect and onLoad Events example</h1>
+    <p>Select a color:</p>
+    <select id="colorSelect">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+    </select>
+    <p>Select an Animal:</p>
+<select id="animalSelect">
+    <option value="cat">Cat</option>
+    <option value="dog">Dog</option>
+    <option value="sheep">Sheep</option>
+    <option value="mouse">Mouse</option>
+    <option value="pigeon">Pigeon</option>
+    <option value="tiger">Tiger</option>
+</select>
+<p id="selectedAnimal"></p>  Corrected ID 
+
+<script>
+    function onAnimalSelectChange() {
+        var select = document.getElementById("animalSelect");
+        var selectedAnimal = select.options[select.selectedIndex].value;
+        var selectedAnimalText = select.options[select.selectedIndex].text;
+        document.getElementById("selectedAnimal").innerHTML = "Your Favourite Animal is: " + selectedAnimalText + " (" + selectedAnimal + ")";
+    }
+
+    // Attach the onSelect event handler to the animal select element
+    document.getElementById("animalSelect").addEventListener("change", onAnimalSelectChange);
+
+    // To ensure this is triggered if you want the onLoad event to show default text
+    window.addEventListener("load", function() {
+        document.getElementById("selectedAnimal").innerHTML = "Please select an animal.";
+    });
+</script>
+
+    <p id="selectedColor"></p>
+    <script>
+        // Function to handle the onSelect event
+        function onSelectChange() {
+            var select = document.getElementById("colorSelect");
+            var selectedColor = select.options[select.selectedIndex].value;
+            var selectedColorText = select.options[select.selectedIndex].text;
+    
+            document.getElementById("selectedColor").innerHTML = "You selected: " + selectedColorText + " (" + selectedColor + ")";
+        }
+        // Function to handle the onLoad event
+        function onLoad() {
+            document.getElementById("selectedColor").innerHTML = "Please select a color.";
+
+        }
+
+        // Attach the onSelect event handler to the select element
+        var select = document.getElementById("colorSelect");
+        select.addEventListener("change", onSelectChange);
+
+        // Attach the onLoad event handler to the window's load event
+        window.addEventListener("load", onLoad);
+    </script>
+    <h1>JavaScript Object Creation</h1>
+
+    <h2>Object Literal:</h2>
+    <script>
+        // Using Object Literal
+        var personLiteral = {
+            firstName: "xyz",
+            lastName: "abc",
+            age: 30
+        };
+
+        document.write("Name: " + personLiteral.firstName + " " + personLiteral.lastName + "<br>");
+        document.write("Age: " + personLiteral.age + "<br>");
+    </script>
+
+    <h2>Object Instance:</h2>
+    <script>
+        // Using Object Instantiation
+        var personInstance = new Object();
+        personInstance.firstName = "hello";
+        personInstance.lastName = "niet";
+        personInstance.age = 25;
+
+        document.write("Name: " + personInstance.firstName + " " + personInstance.lastName + "<br>");
+        document.write("Age: " + personInstance.age + "<br>");
+    </script>
+    <h2>Object Constructor:</h2>
+    <script>
+        // Using Object Constructor
+        function Person(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+    
+        var personConstructor = new Person("mani", "pun", 35);
+        var personConstructor1 = new Person("mani1", "pun1", 35);
+        document.write("Name: " + personConstructor.firstName + " " + personConstructor.lastName + "<br>");
+        document.write("Age: " + personConstructor.age + "<br>");
+        document.write("Name: " + personConstructor1.firstName + " " + personConstructor1.lastName + "<br>");
+        document.write("Age: " + personConstructor1.age + "<br>");
+
+    </script>
+    
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Event, onSelect, and onLoad Events</title>
+</head>
+<body>
+    <h1>Button Example</h1>
+
+    <button id="btn" onclick="clickme()">Click me</button>
+
+    <script>
+        function clickme() {
+            var btn = document.getElementById("btn");
+            alert("ok");
+        }
+    </script>
+
+    <button id="btn">Click me</button>
+
+    <script>
+        function clickme() {
+            var btn = document.getElementById("btn");
+            alert("ok");
+        }
+        document.addEventListener("click", clickme);
+    </script>
+
+    <h1>onSelect and onLoad Events Example</h1>
+
+    <p>Select a color:</p>
+    <select id="colorSelect">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+    </select>
+
+    <p id="selectedColor"></p>
+
+    <p>Select an Animal:</p>
+    <select id="animalSelect">
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+        <option value="sheep">Sheep</option>
+        <option value="mouse">Mouse</option>
+        <option value="pigeon">Pigeon</option>
+        <option value="tiger">Tiger</option>
+    </select>
+
+    <p id="selectedAnimal"></p>
+
+    <script>
+        // Function to handle the onSelect event for color selection
+        function onSelectChange() {
+            var select = document.getElementById("colorSelect");
+            var selectedColor = select.options[select.selectedIndex].value;
+            var selectedColorText = select.options[select.selectedIndex].text;
+            document.getElementById("selectedColor").innerHTML = "You selected: " + selectedColorText + " (" + selectedColor + ")";
+        }
+
+        // Function to handle the onSelect event for animal selection
+        function onAnimalSelectChange() {
+            var select = document.getElementById("animalSelect");
+            var selectedAnimal = select.options[select.selectedIndex].value;
+            var selectedAnimalText = select.options[select.selectedIndex].text;
+            document.getElementById("selectedAnimal").innerHTML = "Your Favourite Animal is: " + selectedAnimalText + " (" + selectedAnimal + ")";
+        }
+
+        // Function to handle the onLoad event
+        function onLoad() {
+            document.getElementById("selectedColor").innerHTML = "Please select a color.";
+            document.getElementById("selectedAnimal").innerHTML = "Please select an animal.";
+        }
+
+        // Attach the onSelect event handlers to the select elements
+        document.getElementById("colorSelect").addEventListener("change", onSelectChange);
+        document.getElementById("animalSelect").addEventListener("change", onAnimalSelectChange);
+
+        // Attach the onLoad event handler to the window's load event
+        window.addEventListener("load", onLoad);
+    </script>
+
+    <h1>JavaScript Object Creation</h1>
+
+    <h2>Object Literal:</h2>
+    <script>
+        // Using Object Literal
+        var personLiteral = {
+            firstName: "xyz",
+            lastName: "abc",
+            age: 30
+        };
+
+        document.write("Name: " + personLiteral.firstName + " " + personLiteral.lastName + "<br>");
+        document.write("Age: " + personLiteral.age + "<br>");
+    </script>
+
+    <h2>Object Instance:</h2>
+    <script>
+        // Using Object Instantiation
+        var personInstance = new Object();
+        personInstance.firstName = "hello";
+        personInstance.lastName = "niet";
+        personInstance.age = 25;
+
+        document.write("Name: " + personInstance.firstName + " " + personInstance.lastName + "<br>");
+        document.write("Age: " + personInstance.age + "<br>");
+    </script>
+
+    <h2>Object Constructor:</h2>
+    <script>
+        // Using Object Constructor
+        function Person(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+
+        var personConstructor = new Person("mani", "pun", 35);
+        var personConstructor1 = new Person("mani1", "pun1", 35);
+
+        document.write("Name: " + personConstructor.firstName + " " + personConstructor.lastName + "<br>");
+        document.write("Age: " + personConstructor.age + "<br>");
+        document.write("Name: " + personConstructor1.firstName + " " + personConstructor1.lastName + "<br>");
+        document.write("Age: " + personConstructor1.age + "<br>");
+    </script>
+</body>
+</html>

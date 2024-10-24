@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onClick and onSubmit Example</title>
+</head>
+<body style="background-color: aqua;">
+    <h2 style="display: block;background-color: limegreen;color:antiquewhite">onClick Event</h2>
+    <button onclick="handleClick()"style="background-color:pink;margin-color:green;">Click Me!</button>
+    
+    <h2 style="background-color: crimson;color:rgb(242, 245, 245);">onSubmit Event</h2>
+    <form onsubmit="return handleSubmit(event)"style="background-color:red;">
+        <label for="name"style="color:white">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function handleClick() {
+            alert("Button clicked!");
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Form submitted!");
+            return false;
+        }
+    </script>
+</body>
+</html>
